@@ -1,0 +1,20 @@
+section#mint {
+    padding: 50px 0;
+    text-align: center;
+
+    .underline {
+        width: 175px;
+        margin: 0 auto 30px auto;
+    }
+
+    p {
+        margin-bottom: 20px;
+    }
+
+    .button-container {
+        border: 2px solid $white; 
+        padding: 15px;
+        max-width: 160px;
+        margin: auto;
+    }
+}

@@ -1,0 +1,33 @@
+header {
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0,.5), rgba(0, 0, 0,.9)), url(../img/header.jpg);
+    background-size: cover;
+    // background-repeat: no-repeat;
+    background-position: center;
+
+    .container {
+        padding-top: 30vh;
+    
+        .row {
+
+            article {
+                width: 70%;
+
+                h1 {
+                    padding-top: 45px;
+                    font-size: 3.7rem;
+                    padding-bottom: 25px;
+                }
+
+                p {
+                    margin-bottom: 55px;
+                    line-height: 1.5;
+                }
+
+                a {
+                    background: linear-gradient(141deg, rgba(15,76,117,1) 15%, rgba(50,130,184,1) 70%, rgba(187,225,250,1) 100%);
+                }
+            }
+        }
+    }
+}

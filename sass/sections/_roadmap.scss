@@ -1,0 +1,41 @@
+#roadmap {
+    padding: 50px;
+
+    .row {
+
+        .img {
+            width: 50%;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .roadmap-content {
+            width: 50%;
+            text-align: left;
+
+            h2 {
+                font-size: 2.2rem;
+                margin-top: 60px;
+
+                &.m-5 {
+                    margin-top: 30px !important;
+                }
+            }
+
+            .underline {
+                width: 175px;
+            }
+
+            p {
+                margin-top: 20px;
+            }
+
+            h3 {
+                margin-top: 30px;
+            }
+        }
+    }
+}

@@ -1,0 +1,11 @@
+FONTS
+Ubuntu - text 
+Roboto - titles
+
+NAV
+about 
+mint
+roadmap
+faq
+discord
+twitter

@@ -1,0 +1,216 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth !important;
+}
+
+body {
+    font-size: 18px;
+    background: $black;
+    background-size: cover;
+    color: $white;
+    font-family: 'Roboto', sans-serif;
+
+    &::selection {
+        background-color:  #888;
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    // color: $pink-light;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bolder;
+}
+
+.container {
+    max-width: 1150px;
+    margin: auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.underline {
+    height: 2px;
+    background: $white;
+    border: none;
+    outline: none;
+    margin-bottom: 30px;
+}
+
+.title {
+    font-size: 2.4rem;
+}
+
+.title-container {
+    margin: 0 auto;
+    text-align: center;
+
+    hr {
+        width: 175px;
+        margin: auto;
+    }
+
+    p {
+        margin-top: 20px;
+        margin-bottom: 40px;
+    }
+}
+
+a.link {
+    color: $white;
+    transition: .4s ease;
+    position: relative;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    &:hover {
+        color: $white;
+    }
+
+    &:before {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: #FFF;
+        visibility: hidden;
+        transition: all 0.3s ease-in-out;
+    }
+
+    &:hover:before {
+        visibility: visible;
+        width: 100%;
+        // margin: 0 7px;
+    }
+}
+
+a {
+    color: $white;
+
+    i.fab {
+        text-decoration: none;
+        color: $white;
+
+        &:hover {
+            color: $white;
+            text-decoration: none;
+            transition-duration: .5s;
+            animation: rotate .5s linear; 
+        }
+    }
+
+    &:hover {
+        color: $white;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+.button {
+	pointer-events: auto;
+	cursor: pointer;
+	background: $white;
+	border: none !important;
+	padding: 1.5rem 3rem;
+	margin: 0;
+	font-size: inherit;
+	position: relative;
+	display: inline-block;
+    outline: none !important;
+}
+
+.button::before,
+.button::after {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.button--bestia {
+	font-size: 1.15rem;
+	color: $white;
+	background: none;
+	padding: 0;
+    border: none !important;
+}
+
+.button--bestia .button__bg {
+    border: none !important;
+	top: 0;
+	left: 0;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: $white;
+	border-radius: 0.85rem;
+	overflow: hidden;
+	transition: transform 0.4s cubic-bezier(0.1, 0, 0.3, 1);
+}
+
+.button--bestia:hover .button__bg {
+	transform: scale3d(1.2,1.2,1);
+}
+
+.button--bestia .button__bg::before,
+.button--bestia .button__bg::after {
+	content: '';
+	position: absolute;
+	background: $black;
+}
+
+.button--bestia .button__bg::before {
+	width: 110%;
+	height: 0;
+	padding-bottom: 110%;
+	top: 50%;
+	left: 50%;
+	border-radius: 50%;
+	transform: translate3d(-50%,-50%,0) scale3d(0,0,1);
+}
+
+.button--bestia:hover .button__bg::before {
+	transition: transform 0.4s cubic-bezier(0.1, 0, 0.3, 1);
+	transform: translate3d(-50%,-50%,0) scale3d(1,1,1);
+}
+
+.button--bestia .button__bg::after {
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	transition: opacity 0.3s;
+}
+
+.button--bestia:hover .button__bg::after {
+	opacity: 1;
+	transition-duration: 0.01s;
+	transition-delay: 0.3s;
+}
+
+.button--bestia span {
+	display: block;
+	position: relative;
+	padding: 1.5rem 3rem;
+	mix-blend-mode: difference;
+}

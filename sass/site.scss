@@ -1,0 +1,23 @@
+// Ubuntu
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+
+// Roboto
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+// core 
+@import 'variables';
+@import 'animations';
+
+// layout
+@import 'layouts/base';
+@import 'layouts/nav';
+@import 'layouts/header';
+@import 'layouts/footer';
+
+// sections
+@import 'sections/about';
+@import 'sections/mint';
+@import 'sections/roadmap';
+@import 'sections/slider';
+@import 'sections/team';
+@import 'sections/faq';
