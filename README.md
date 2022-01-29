@@ -1,2 +1,0 @@
-# nft-site
-NFT Project
