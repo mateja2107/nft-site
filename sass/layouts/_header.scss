@@ -6,6 +6,7 @@ header {
     background-position: center;
 
     .container {
+        transition: .4 ease-in-out;
         padding-top: 30vh;
     
         .row {

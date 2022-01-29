@@ -18,6 +18,8 @@
     </head>
     <!-- https://soulcops.com/nft/ -->
     <body>
+        <!-- Scroll To Top -->
+        <button onclick="topFunction()" class="myBtn" title="Go to top"><i class="fas fa-arrow-up"></i></button>
 
         <!-- Header -->
         <header>
@@ -45,7 +47,7 @@
                 </div>
             </nav>
 
-            <div class="container">
+            <div class="container section">
                 <div class="row">
                     <article>
                         <h1>Lorem, ipsum nft collection</h1>
@@ -61,7 +63,7 @@
         <!-- Header -> end -->
 
         <!-- About Us -->
-        <section id="about" class="container">
+        <section id="about" class="container section">
             <div class="row">
                 <article>
                     <h2 class="title">About Us</h2>
@@ -81,71 +83,61 @@
         <!-- About Us -> end -->
 
         <!-- NFT Slider -->
-        <div class="title-container">
-            <h2 class="title">Our NFTs</h2>
-            <hr class="underline">
-            <p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</p>
+        <div class="slider container section">
+
+            <div class="title-container">
+                <h2 class="title">Our NFTs</h2>
+                <hr class="underline">
+                <p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, voluptatem veniam. Quis nam temporibus mollitia quisquam doloribus, autem reprehenderit doloremque quidem ex quasi expedita dolorum magni sunt nemo vel cupiditate..</p>
+            </div>
+
+            <div class="carousel">
+                <div class="carousel__item carousel__item--visible">
+                    <img src="img/slider1.PNG" />
+                </div>
+                <div class="carousel__item">
+                    <img src="img/slider2.PNG" />
+                </div>
+                <div class="carousel__item">
+                    <img src="img/slider3.PNG" />
+                </div>
+                <div class="carousel__item">
+                    <img src="img/slider4.PNG" />
+                </div>
+                <div class="carousel__item">
+                    <img src="img/slider5.PNG" />
+                </div>
+                <div class="carousel__item">
+                    <img src="img/slider6.PNG" />
+                </div>
+                <div class="carousel__item">
+                    <img src="img/slider7.PNG" />
+                </div>
+                <div class="carousel__item">
+                    <img src="img/virus.PNG" />
+                </div>
+                <div class="carousel__item">
+                    <img src="img/slider8.PNG" />
+                </div>
+        
+                <div class="carousel__actions">
+                    <button id="carousel__button--prev" aria-label="Previous slide"><</button>
+                    <button id="carousel__button--next" aria-label="Next slide">></button>
+                </div>
+            </div>
         </div>
-
-        <div class="carousel">
-            <div class="carousel__item carousel__item--visible">
-                <img src="img/slider1.PNG" />
-            </div>
-            <div class="carousel__item">
-                <img src="img/slider2.PNG" />
-            </div>
-            <div class="carousel__item">
-                <img src="img/slider3.PNG" />
-            </div>
-            <div class="carousel__item">
-                <img src="img/slider4.PNG" />
-            </div>
-            <div class="carousel__item">
-                <img src="img/slider5.PNG" />
-            </div>
-            <div class="carousel__item">
-                <img src="img/slider6.PNG" />
-            </div>
-            <div class="carousel__item">
-                <img src="img/slider7.PNG" />
-            </div>
-            <div class="carousel__item">
-                <img src="img/virus.PNG" />
-            </div>
-            <div class="carousel__item">
-                <img src="img/slider8.PNG" />
-            </div>
-    
-            <div class="carousel__actions">
-                <button id="carousel__button--prev" aria-label="Previous slide"><</button>
-                <button id="carousel__button--next" aria-label="Next slide">></button>
-            </div>
-          </div>
         <!-- NFT Slider -> end -->
-
-        <!-- Mint -->
-        <section id="mint" class="container">
-            <h2 class="title">Mint Now</h2>
-            <hr class="underline">
-
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, magni!</p>
-            
-            <div class="button-container">
-                <a class="link" href="#">Mint Now</a>
-            </div>
-        </section>
-        <!-- Mint -> end -->
 
         <!-- Roadmap -->
         <section id="roadmap" class="container">
 
-            <div class="title-container">
+            <div class="title-container section">
                 <h2 class="title">Roadmap</h2>
                 <hr class="underline">
                 <p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</p>
             </div>
 
-            <div class="row">
+            <div class="row section">
                 <div class="img">
                     <img src="img/roadmap1.PNG" alt="">
                 </div>
@@ -161,7 +153,7 @@
                 </div>
             </div>
 
-            <div class="row">
+            <div class="row section">
                 <div class="roadmap-content">
                     <h2>50% lorem</h2>
                     <hr class="underline">
@@ -177,7 +169,7 @@
                 </div>
             </div>
 
-            <div class="row">
+            <div class="row section">
                 <div class="img">
                     <img src="img/roadmap3.PNG" alt="">
                 </div>
@@ -193,7 +185,7 @@
                 </div>
             </div>
 
-            <div class="row">
+            <div class="row section">
                 <div class="roadmap-content">
                     <h2>100% lorem</h2>
                     <hr class="underline">
@@ -211,15 +203,28 @@
         </section>
         <!-- Roadmap -> end -->
 
+        <!-- Mint -->
+        <section id="mint" class="container section">
+            <h2 class="title">Mint Now</h2>
+            <hr class="underline">
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, magni! Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi in, minima quidem, veniam assumenda voluptatibus consequuntur, animi repellendus enim tenetur nihil ratione. Natus nostrum animi, quia id expedita pariatur fugit quisquam fugiat assumenda rerum, atque eos ex soluta optio quasi asperiores, libero quam. Facilis, quos praesentium quis atque numquam veniam!</p>
+            
+            <button style="border: none;" class="button button--bestia-2">
+                <div style="border: none;"class="button__bg"></div><span>Mint Now</span>
+            </button>
+        </section>
+        <!-- Mint -> end -->
+
         <!-- Team -->
         <section id="team" class="container">
-            <div class="title-container">
-                <h2 class="title">Roadmap</h2>
+            <div class="title-container section">
+                <h2 class="title">Our Team</h2>
                 <hr class="underline">
                 <p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</p>
             </div>
 
-            <div class="row">
+            <div class="row section">
                 <article>
                     <img src="img/team.jpg" alt="">
                     <h2>Name Name</h2>
@@ -243,57 +248,60 @@
 
         <!-- FAQ -->
         <section id="faq">
-            <div class="title-container">
+            <div class="title-container section">
                 <h2 class="title">FAQ</h2>
                 <hr class="underline">
                 <p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</p>
             </div>
 
             <div class="container">
-                <article>
+                <article class="faq-el section">
                     <h2>Question?</h2>
-                    <p>odgovor Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat harum voluptatem perspiciatis praesentium fugiat adipisci atque ad labore quos? Adipisci mollitia cupiditate commodi ratione quasi cum, esse fugit officia totam eligendi, illo rem? Facere sequi error provident mollitia doloribus nostrum!</p>
-                    <hr>
+                    <span>
+                    <i data-arrow-id="1" class="fas fa-chevron-right arrow"></i>
+                    </span>
+                    <p><br><br><p data-answer-id="1" class="answer"><br>Odgovor Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat harum voluptatem perspiciatis praesentium fugiat adipisci atque ad labore quos? Adipisci mollitia cupiditate commodi ratione quasi cum, esse fugit officia totam eligendi, illo rem? Facere sequi error provident mollitia doloribus nostrum!</p></p>
                 </article>
 
-                <article>
+                <article class="faq-el section">
                     <h2>Question?</h2>
-                    <p>odgovor Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat harum voluptatem perspiciatis praesentium fugiat adipisci atque ad labore quos? Adipisci mollitia cupiditate commodi ratione quasi cum, esse fugit officia totam eligendi, illo rem? Facere sequi error provident mollitia doloribus nostrum!</p>
-                    <hr>
+                    <span>
+                    <i data-arrow-id="2" class="fas fa-chevron-right arrow"></i>
+                    </span>
+                    <p><br><br><p data-answer-id="2" class="answer"><br>Odgovor Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat harum voluptatem perspiciatis praesentium fugiat adipisci atque ad labore quos? Adipisci mollitia cupiditate commodi ratione quasi cum, esse fugit officia totam eligendi, illo rem? Facere sequi error provident mollitia doloribus nostrum!</p></p>
                 </article>
 
-                <article>
+                <article class="faq-el section">
                     <h2>Question?</h2>
-                    <p>odgovor Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat harum voluptatem perspiciatis praesentium fugiat adipisci atque ad labore quos? Adipisci mollitia cupiditate commodi ratione quasi cum, esse fugit officia totam eligendi, illo rem? Facere sequi error provident mollitia doloribus nostrum!</p>
-                    <hr>
+                    <span>
+                    <i data-arrow-id="3" class="fas fa-chevron-right arrow"></i>
+                    </span>
+                    <p><br><br><p data-answer-id="3" class="answer"><br>Odgovor Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat harum voluptatem perspiciatis praesentium fugiat adipisci atque ad labore quos? Adipisci mollitia cupiditate commodi ratione quasi cum, esse fugit officia totam eligendi, illo rem? Facere sequi error provident mollitia doloribus nostrum!</p></p>
                 </article>
 
-                <article>
+                <article class="faq-el section">
                     <h2>Question?</h2>
-                    <p>odgovor Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat harum voluptatem perspiciatis praesentium fugiat adipisci atque ad labore quos? Adipisci mollitia cupiditate commodi ratione quasi cum, esse fugit officia totam eligendi, illo rem? Facere sequi error provident mollitia doloribus nostrum!</p>
-                    <hr>
-                </article>
-
-                <article>
-                    <h2>Question?</h2>
-                    <p>odgovor Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat harum voluptatem perspiciatis praesentium fugiat adipisci atque ad labore quos? Adipisci mollitia cupiditate commodi ratione quasi cum, esse fugit officia totam eligendi, illo rem? Facere sequi error provident mollitia doloribus nostrum!</p>
-                    <hr>
+                    <span>
+                    <i data-arrow-id="4" class="fas fa-chevron-right arrow"></i>
+                    </span>
+                    <p><br><br><p data-answer-id="4" class="answer"><br>Odgovor Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat harum voluptatem perspiciatis praesentium fugiat adipisci atque ad labore quos? Adipisci mollitia cupiditate commodi ratione quasi cum, esse fugit officia totam eligendi, illo rem? Facere sequi error provident mollitia doloribus nostrum!</p></p>
                 </article>
             </div>
         </section>
         <!-- FAQ -> end -->
 
         <!-- footer -->
-        <footer>
+        <footer class="section">
             <p>&copy; ime nft kolekcije koje moras da smislis stefane :D</p>
         </footer>
         <!-- footer -> end -->
 
-        <!-- jQuery. js -->
+        <!-- jQuery.js -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
         <!-- Custom JS -->
         <script src="js/main.js"></script>
         <script src="js/slider.js"></script>
+        <script src="js/faq.js"></script>
     </body>
 </html>

@@ -1,6 +1,7 @@
 footer {
+    transition: .4 ease-in-out;
     padding: 40px 0;
+    background-color: $dark-gray;
     text-align: center;
     font-size: 23px;
-    border-top: 1px solid $white;
 }

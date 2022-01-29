@@ -9,10 +9,10 @@ html {
 }
 
 body {
-    font-size: 18px;
+    font-size: 20px;
     background: $black;
     background-size: cover;
-    color: $white;
+    color: $dirty-white;
     font-family: 'Roboto', sans-serif;
 
     &::selection {
@@ -24,6 +24,7 @@ h1, h2, h3, h4, h5, h6 {
     // color: $pink-light;
     font-family: 'Roboto', sans-serif;
     font-weight: bolder;
+    color: $white;
 }
 
 .container {
@@ -48,7 +49,29 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 2.4rem;
 }
 
+.myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none !important;
+    background-color: $red;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+
+    &:hover {
+        background-color: #555;
+        outline: none !important;
+    }
+} 
+
 .title-container {
+    transition: .4 ease-in-out;
     margin: 0 auto;
     text-align: center;
 
@@ -114,16 +137,6 @@ a {
     }
 }
 
-
-
-
-
-
-
-
-
-
-
 .button {
 	pointer-events: auto;
 	cursor: pointer;
@@ -147,70 +160,145 @@ a {
 }
 
 .button--bestia {
-	font-size: 1.15rem;
-	color: $white;
-	background: none;
-	padding: 0;
+    font-size: 1.15rem;
+    color: $white;
+    background: none;
+    padding: 0;
     border: none !important;
+    
+    .button__bg {
+        border: none !important;
+        top: 0;
+        left: 0;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: $white;
+        border-radius: 0.85rem;
+        overflow: hidden;
+        transition: transform 0.4s cubic-bezier(0.1, 0, 0.3, 1);
+    }
+    
+    &:hover .button__bg {
+        transform: scale3d(1.2,1.2,1);
+    }
+    
+    .button__bg::before,
+    .button__bg::after {
+        content: '';
+        position: absolute;
+        background: $black;
+    }
+    
+    .button__bg::before {
+        width: 110%;
+        height: 0;
+        padding-bottom: 110%;
+        top: 50%;
+        left: 50%;
+        border-radius: 50%;
+        transform: translate3d(-50%,-50%,0) scale3d(0,0,1);
+    }
+    
+    &:hover .button__bg::before {
+        transition: transform 0.4s cubic-bezier(0.1, 0, 0.3, 1);
+        transform: translate3d(-50%,-50%,0) scale3d(1,1,1);
+    }
+    
+    .button__bg::after {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+    
+    &:hover .button__bg::after {
+        opacity: 1;
+        transition-duration: 0.01s;
+        transition-delay: 0.3s;
+    }
+    
+    span {
+        display: block;
+        position: relative;
+        padding: 1.5rem 3rem;
+        mix-blend-mode: difference;
+    }
 }
 
-.button--bestia .button__bg {
+
+.button--bestia-2 {
+    font-size: 1.15rem;
+    color: $white;
+    background: none;
+    padding: 0;
     border: none !important;
-	top: 0;
-	left: 0;
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	background: $white;
-	border-radius: 0.85rem;
-	overflow: hidden;
-	transition: transform 0.4s cubic-bezier(0.1, 0, 0.3, 1);
+    
+    .button__bg {
+        border: none !important;
+        top: 0;
+        left: 0;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: $black;
+        border-radius: 0.85rem;
+        overflow: hidden;
+        transition: transform 0.4s cubic-bezier(0.1, 0, 0.3, 1);
+    }
+    
+    &:hover .button__bg {
+        transform: scale3d(1.2,1.2,1);
+    }
+    
+    .button__bg::before,
+    .button__bg::after {
+        content: '';
+        position: absolute;
+        background: $white;
+    }
+    
+    .button__bg::before {
+        width: 110%;
+        height: 0;
+        padding-bottom: 110%;
+        top: 50%;
+        left: 50%;
+        border-radius: 50%;
+        transform: translate3d(-50%,-50%,0) scale3d(0,0,1);
+    }
+    
+    &:hover .button__bg::before {
+        transition: transform 0.4s cubic-bezier(0.1, 0, 0.3, 1);
+        transform: translate3d(-50%,-50%,0) scale3d(1,1,1);
+    }
+    
+    .button__bg::after {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+    
+    &:hover .button__bg::after {
+        opacity: 1;
+        transition-duration: 0.01s;
+        transition-delay: 0.3s;
+    }
+    
+    span {
+        display: block;
+        position: relative;
+        padding: 1.5rem 3rem;
+        mix-blend-mode: difference;
+    }
 }
 
-.button--bestia:hover .button__bg {
-	transform: scale3d(1.2,1.2,1);
-}
-
-.button--bestia .button__bg::before,
-.button--bestia .button__bg::after {
-	content: '';
-	position: absolute;
-	background: $black;
-}
-
-.button--bestia .button__bg::before {
-	width: 110%;
-	height: 0;
-	padding-bottom: 110%;
-	top: 50%;
-	left: 50%;
-	border-radius: 50%;
-	transform: translate3d(-50%,-50%,0) scale3d(0,0,1);
-}
-
-.button--bestia:hover .button__bg::before {
-	transition: transform 0.4s cubic-bezier(0.1, 0, 0.3, 1);
-	transform: translate3d(-50%,-50%,0) scale3d(1,1,1);
-}
-
-.button--bestia .button__bg::after {
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	opacity: 0;
-	transition: opacity 0.3s;
-}
-
-.button--bestia:hover .button__bg::after {
-	opacity: 1;
-	transition-duration: 0.01s;
-	transition-delay: 0.3s;
-}
-
-.button--bestia span {
-	display: block;
-	position: relative;
-	padding: 1.5rem 3rem;
-	mix-blend-mode: difference;
+.section-hidden {
+    opacity: 0;
+    transform: translateY(8rem);
 }

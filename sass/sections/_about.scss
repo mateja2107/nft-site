@@ -1,8 +1,17 @@
 section#about {
-    padding: 50px 0;
+    transition: .4 ease-in-out;
+    margin: 50px auto;
+    background-color: $dark-gray;
+    border-radius: 20px;
+    padding: 20px;
+
 
     article {
-        width: 48%;
+        width: 50%;
+
+        .title {
+            margin-top: 20px;
+        }
 
         hr {
             width: 175px;
@@ -14,10 +23,20 @@ section#about {
 
         p {
             line-height: 1.5;
+            background-color: $light-black;
+            padding: 20px 20px 20px 10px;
+            border-radius: 10px;
+            border-left: 10px solid $green;
         }
 
         img {
             width: 100%;
+            height: 100%;
+            border-radius: 20px;
+        }
+
+        &:nth-child(1) {
+            padding-right: 20px;
         }
     }
 }

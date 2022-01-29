@@ -1,9 +1,29 @@
+.slider {
+  transition: .4 ease-in-out;
+  padding: 50px 0;
+  background-color: $dark-gray;
+  border-radius: 20px;
+
+  .title-container {
+
+    p {
+      background-color: $light-black;
+      border-radius: 10px;
+      padding: 20px 20px 20px 10px;
+      border-left: 10px solid $green;
+      max-width: 850px;
+      margin: 40px auto 30px auto;
+    }
+  }
+}
+
 .carousel {
     margin: 0 auto;
     overflow: hidden;
     max-width: 750px;
     max-height: 470px;
     position: relative;
+    border-radius: 10px;
   }
   
   .carousel .carousel__item,
@@ -38,8 +58,9 @@
     cursor: pointer;
     width: 40px;
     height: 40px;
+    background-color: $white;
   }
-  
+
   .carousel .carousel__actions button#carousel__button--prev {
     margin-left: 20px;
   }
@@ -66,4 +87,3 @@
       transform: opacity linear;
     }
   }
-  

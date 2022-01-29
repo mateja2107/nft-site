@@ -4,22 +4,57 @@ section#faq {
     .container {
 
         article {
+            transition: .4 ease-in-out;
             margin: 50px 0;
-            border-left: 1px solid $white;
+            padding: 20px 15px 15px 15px;
+            background-color: $dark-gray;
+            border-radius: 20px;
+            min-height: 10px;
 
             h2 {
                 font-size: 30px;
-                margin-bottom: 20px;
-                padding-left: 20px;
+                float: left;
+                padding-top: 5px;
             }
 
-            p {
-                padding-left: 20px;
+            span i {
+                float: right;
+                font-size: 30px;
+                margin-top: 10px;
+                cursor: pointer;
+                transition: .4s ease-in-out;
+
+                &.active {
+                    transform: rotate(90deg);
+                }
             }
 
-            hr {
-                width: 70%;
-                margin-top: 20px;
+            p.answer {
+                clear: both;
+                transition: .5s ease-in-out;
+                max-height: 0;
+                overflow: hidden;         
+                position: relative;    
+                background-color: $light-black;  
+                font-size: 20px;
+
+                &.visible {
+                    max-height: 300px;
+                    padding: 0 10px 10px 15px;
+                    border-radius: 10px;
+                }
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    width: .6rem;
+                    height: 100%;
+                    background-color: $green;
+                    top: 50%;
+                    left: 0;
+                    margin-right: 100px;
+                    transform: translateY(-50%);
+                }
             }
         }
     }
